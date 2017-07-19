@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="toDo" lang ="eng">
+  <head>
+    <meta charset="utf-8">
+    <title>Lab 12</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <div ng-app="toDo" ng-controller="toDoCtrl" class="container">
+  <body ng-controller="toDoCtrl">
+    <h1>Daily Tasks</h1>
+
+    <input type="text" ng-model="listItem.info" placeholder="Add To Do">
+    <input type="text" ng-model="search" placeholder="Search">
+    <ul><div ng-app="myApp" ng-controller="myCtrl">
+      <li ng-repeat="listItem in list |filter: search"> {{listItem.info}}</li>
+    </ul>
+
+    <button type="button"ng-click="addToDo(listItem)">Add</button>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
